@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Oinur/socialPage/static/css/main.7ec923ab.css",
+    "main.js": "/Oinur/socialPage/static/js/main.41a887af.js",
+    "static/js/453.960ced12.chunk.js": "/Oinur/socialPage/static/js/453.960ced12.chunk.js",
+    "static/media/loginBackground.png": "/Oinur/socialPage/static/media/loginBackground.abab5d8f74b2b5eb01b5.png",
+    "index.html": "/Oinur/socialPage/index.html",
+    "main.7ec923ab.css.map": "/Oinur/socialPage/static/css/main.7ec923ab.css.map",
+    "main.41a887af.js.map": "/Oinur/socialPage/static/js/main.41a887af.js.map",
+    "453.960ced12.chunk.js.map": "/Oinur/socialPage/static/js/453.960ced12.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ec923ab.css",
+    "static/js/main.41a887af.js"
+  ]
+}
