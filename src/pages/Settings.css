@@ -1,0 +1,49 @@
+.settingsWrap{
+    width: 100%;
+    height: 100vh;
+    user-select: none;
+}
+.settings{
+    width: 100%;
+    height:500px;
+    background-color: var(--bg-block);
+    border-radius: 25px;
+    box-sizing: border-box;
+    border: 1px var(--border) solid;
+}
+.siteMode{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+.darkModeBtn{
+    display: flex;
+    align-items: center;
+    width: 40px;
+    height: 20px;
+    border: 1px black solid;
+    border-radius: 25px;
+    transition: 0.3s;
+    cursor: pointer;
+    z-index: 999;
+}
+.darkModeBtn.enabled{
+    transition: 0.3s;
+    background-color: #1769e2;
+    
+}
+.darkModeBtn.enabled .btnCircle{
+    transition: 0.3s;
+    transform: translateX(20px);
+    
+}
+.btnCircle{
+    height: 16px;
+    width: 16px;
+    background-color: var(--text);
+    border-radius: 50%;
+    margin: 2px;
+    transition: 0.3s;
+}
+

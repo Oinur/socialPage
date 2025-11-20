@@ -1,0 +1,203 @@
+.profileWrapper{
+    
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width:100%;
+    height: 100vh;
+    gap:20px;
+    
+}
+
+.userCard{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: start;
+    width: 100%;
+    min-height: 300px;
+    background-color: rgb(185, 185, 185);
+    background-size: cover;
+    border-radius: 25px 25px 0px 0px;
+    box-sizing: border-box;
+    border: 1px var(--border) solid;
+}
+
+.userAvatar{
+    min-height:150px;
+    width:150px;
+    background-size:cover;
+    background-color: rgb(185, 185, 185);
+    border-radius: 50%;
+    border: 7px var(--bg-block) solid;
+    z-index: 2;
+    margin-left:5%;
+}
+
+.userInfo{
+    margin-top: -22px;
+    background-color: var(--bg-block);
+    height: 30%;
+    width: 100%;
+    border-radius: 25px 25px 0% 0%;
+    font-size:1.2em;
+}
+
+.userName{
+    margin-left: 5%;
+    display: flex;
+    justify-content: start;
+    text-align: start;
+}
+
+.usersContent{
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    width: 100%;
+    height: 100%;
+    gap: 20px;
+    border-radius: 25px;
+    
+}
+.repostContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    
+    border-radius: 25px;  
+}
+.emptyRepost{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height:500px;
+    width: 100%;
+    background-color: var(--bg-block);
+    border-radius:25px;
+    border: 1px var(--border) solid
+}
+.repostWrapper{
+  display: flex;
+  background-color: var(--bg-block);
+  align-items: center;
+  overflow:hidden;
+  
+  border-radius: 25px;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px var(--border) solid;
+}
+
+.repostTitleWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--bg-block);
+    width: 100%;
+    font-size: 1.2em;   
+    z-index: 100;
+}
+
+.repostTitle{
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 5%;
+}
+
+.repostTime{
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 5%;
+}
+
+.repostPicture{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 500px;
+  background-size: cover;
+  
+}
+
+.profileStatsSection{
+    background-color: var(--bg-block);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width:100%;
+    height:50px;
+    
+}
+.profileLikesSection{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    justify-content: center;
+    gap: 5px;
+}
+.profileLikesWrapper{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    
+}
+.profileCommentsSection{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    justify-content: center;
+    gap: 5px;
+}
+.profileComments{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+.profileRepostsSection{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 400;
+    justify-content: center;
+    gap: 5px;
+}
+.profileReposts{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.profileFriendsWrap{}
+.profileFriendsBlock{ 
+    box-sizing: border-box;
+    height: 220px;
+    width: 100%;
+    background-color: var(--bg-block);
+    border-radius: 25px;
+    border: 1px var(--border) solid;
+}
+.profileFriends{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    
+}

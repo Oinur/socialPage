@@ -1,0 +1,178 @@
+.headerWrapper{
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height:80px;
+    background-color: var(--bg-block);
+    z-index: 1006;
+    box-sizing: border-box;
+    border-bottom: 1px var(--border) solid;
+}
+.header{
+    display: flex;
+    max-width: 1100px;
+    width:100%;
+    justify-content: space-between;
+    margin: 0 auto;
+    
+}
+.headerLogoPlace{
+    display: flex;
+    align-items: center;
+    height: 80px;
+    width: 350px;
+    
+}
+.headerLogoImg{
+    height: 80px;
+    width: 80px;
+    background-image: url(/public/pictures/logo.png);
+    background-size:cover;
+    
+}
+.headerLogoTitle{
+    height: 100%;
+    display: flex;
+    color: #1769e2;
+    font-size: 30px;
+    align-items: center;
+}
+
+.headerUserWrap{
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 5px;
+    cursor:pointer;
+    user-select: none;
+    z-index: 1005;
+}
+.headerUserWrap:hover{
+    background-color: var(--hover);
+}
+.headerUserCircle{
+    width: 50px;
+    height: 50px;
+    border: 1px var(--text) solid;
+    border-radius: 50%;
+    background-color: grey;
+}
+.headerUserArrow{
+    color: var(--text);
+    font-size: 20px;
+}
+
+.layout{ 
+    display: flex;
+       
+    justify-content: center;
+    width: 100%;
+    
+}
+.layoutContent{
+    position: relative;
+    display: grid;
+    grid-template-columns: 20% 1fr;
+    gap: 5px;
+    width: 1100px;
+    margin-top: 10%;
+}
+.navbar{
+    width: 200px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    font-size: 24px;
+    
+}
+.nav{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: start;
+    border-radius: 25px;
+    height: 47vh;
+    gap: 3px;
+    
+}
+.linkContainer{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    gap: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    z-index: 1002;
+}
+.linkContainer:hover{
+    background-color: var(--hover);
+}
+link{
+    width: 100%;
+}
+a {
+    text-decoration: none;
+    color: var(--text);
+    font-weight: 200;
+}
+.navLink {
+    display: flex;
+    justify-content: start;
+    text-decoration: none;
+    color: var(--text);
+    width: 100%;
+    z-index: 999;
+}
+
+.outlet{
+    width: 1140px;
+    width: 100%;
+}
+.settingsWindowWrapper{  
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+}
+.settingsModal{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position:fixed;
+    top:79px;
+    right:21%;
+    background-color: var(--bg-block);
+    width:200px;
+    height:200px;
+    border: 1px var(--border) solid;
+    box-sizing: border-box;
+    z-index:9999;
+}
+.setWindowLink{
+    
+    justify-content: center;
+    width: 100%;
+    height: 30px;
+    color: var(--text);
+    font-size: 18px;
+}
+.setWindowLink:hover{
+    background-color: var(--hover);
+   
+}
+
+@media(width > 2500px){
+    .settingsModal{
+        right: 28%;
+    }
+}
+
+@media (width < 1450px) {
+    .settingsModal{
+        right: 0;
+    }
+}
