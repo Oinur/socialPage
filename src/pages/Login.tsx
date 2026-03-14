@@ -6,6 +6,7 @@ import { User } from '../Data/Types'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../store'
 import { setCurrentUser } from '../store/users/usersActions'
+import { Link } from 'react-router-dom'
   export default function Login(){
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
@@ -54,7 +55,7 @@ import { setCurrentUser } from '../store/users/usersActions'
                    { error &&
                         <p style={{color:'red', marginTop:'-30px'}}>Неправильный логин или пароль</p>
                    } 
-                    <a style={{fontSize:'12px', color:'black'}} href='/register'>Создать аккаунт</a>
+                    <Link style={{ fontSize: '12px', color: 'black' }} to={'/register'}>Создать аккаунт</Link>
                     <button onClick={handleLogin} className='loginSubmitBtn'>Войти</button>
                 </div>
             </div>

@@ -27,7 +27,7 @@
 .headerLogoImg{
     height: 80px;
     width: 80px;
-    background-image: url(/public/pictures/logo.png);
+    background-image: url(/src/pictures/logo.png);
     background-size:cover;
     
 }

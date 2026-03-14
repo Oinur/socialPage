@@ -11,7 +11,7 @@ export type User = {
 
 export type UsersState = {
     users : User[],
-    currentUser?: User,
+    currentUser?: User | null,
 }
 
 export type PostsState = {

@@ -6,6 +6,14 @@ import { url } from 'inspector'
 import { REPOST_KEY } from '../Data/PostsDB'
 import { useSelector } from 'react-redux'
 import { RootState } from '../store'
+import  like  from '../pictures/like.png'
+import liked from '../pictures/liked.png'
+import comment from '../pictures/comments.png'
+import repost from '../pictures/repost.png'
+
+
+
+
 export default function Profile(){
     const currentUser = useSelector((state:RootState) => state.users.currentUser)
     const users = useSelector((state:RootState) => state.users.users)
@@ -67,19 +75,19 @@ export default function Profile(){
                                             <div className='profileStatsSection'>
                                                <div className='profileLikesSection' >
                                                   <div className='profileLikesWrapper'>
-                                                     <img style={{width:20, height:20}} src={post.isLiked ? '/pictures/liked.png' : '/pictures/like.png'} />
+                                                     <img style={{width:20, height:20}} src={post.isLiked ? liked : like} />
                                                      {post.likes}
                                                   </div>
                                                </div>
                                             <div className='profileCommentsSection'>
                                                 <div className='profileComments'>
-                                                    <img style={{height:20, width:20}} src='/pictures/comments.png' />
+                                                    <img style={{height:20, width:20}} src={comment} />
                                                     {post.comments.quantity}
                                                 </div>
                                             </div>
                                             <div className='profileRepostsSection'>
                                             <div className='profileReposts'>
-                                            <img style={{height:20, width:20}} src='pictures/repost.png'/>
+                                            <img style={{height:20, width:20}} src={repost}/>
                                             {post.reposts.quantity}
                                             </div>
                                         </div>

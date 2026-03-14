@@ -1,10 +1,13 @@
 import Navbar from "./Navbar";
-import { Outlet } from "react-router-dom";
+import { Link, Outlet } from "react-router-dom";
 import { User } from "../Data/Types";
 import './Layout.css'
 import { getCurrentUser,logOut } from "../Data/UsersDB";
 import { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { clearCurrentUser } from "../store/users/usersActions";
     function Layout(){
+        const dispatch = useDispatch()
         const [user, setUser] = useState<User | null>(null)
         const [isModalSetOpen, setIsModalOpen] = useState<Boolean>(false)
 
@@ -47,8 +50,8 @@ import { useEffect, useState } from "react";
                 <div className="settingsWindowWrapper" onClick={() => {setIsModalOpen(false)}}> 
                     <div style={{display:`${isModalSetOpen ? '' : 'none'}`}} className="settingsModal">
                         <h3 style={{marginTop:'20px'}}>{user?.name} {user?.surname}</h3>
-                        <a className="setWindowLink"  href="/settings">Настройки</a>
-                        <a className="setWindowLink"  href="/" onClick={logOut}>Выйти</a>
+                        <Link className="setWindowLink"  to="/settings">Настройки</Link>
+                        <Link className="setWindowLink"  to="/" onClick={() => {dispatch(clearCurrentUser(user!))}}>Выйти</Link>
                     </div>    
                 </div> 
 

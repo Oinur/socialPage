@@ -4,7 +4,7 @@
     align-items: center;
     position: fixed;
     inset: 0;
-    width: 100vw;
+    width: 100%;
     height: 100%;
     background-color: rgba(34, 34, 34, 0.856);
     z-index: 2000;
@@ -25,7 +25,7 @@
 .commentPostWrapper{
     display: grid;
     grid-template-rows: 1fr 55px;
-    width: 400px;
+    max-width: 400px;
     height: 60vh;
     background-color: var(--bg-block);
     border-radius:0 25px 25px 0;

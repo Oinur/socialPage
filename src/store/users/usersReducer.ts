@@ -6,8 +6,9 @@ const initialState : UsersState = {
 }
 
 type UsersAction = 
-    | {type: 'ADD_USER', payload: User} 
-    | {type : 'SET_CURRENT_USER', payload : User};
+    | {type: 'ADD_USER', payload: User}
+    | {type : 'SET_CURRENT_USER', payload : User}
+    | {type : 'CLEAR_CURRENT_USER', payload : User}
 
 export const usersReducer = (state = initialState, action: UsersAction) : UsersState => {
     switch (action.type) {
@@ -19,6 +20,9 @@ export const usersReducer = (state = initialState, action: UsersAction) : UsersS
         console.log(initialState.currentUser)
             localStorage.setItem('currentUser', JSON.stringify(action.payload))
             return {...state, currentUser : action.payload}
+        case ('CLEAR_CURRENT_USER') :
+            localStorage.removeItem('currentUser')
+            return {...state, currentUser : null}
         default : 
             return state;
     }

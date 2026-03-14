@@ -9,6 +9,11 @@ import { getCurrentUser } from '../Data/UsersDB'
 import { useDispatch, useSelector } from 'react-redux'
 import { RootState } from '../store'
 import { addPost, likeToggle } from '../store/posts/postsActions'
+import  like  from '../pictures/like.png'
+import liked from '../pictures/liked.png'
+import comment from '../pictures/comments.png'
+import repost from '../pictures/repost.png'
+
 
 
 
@@ -165,7 +170,7 @@ export default function News(){
                         </div>
                     </div>
                     <div onClick={() => {openComments(post.id)}} className='postPicture'>
-                        <img className={post.isLiked ? 'likedAnimation like' : 'likedAnimation'} src='/pictures/liked.png' ></img>
+                        <img className={post.isLiked ? 'likedAnimation like' : 'likedAnimation'} src={liked}></img>
                         <img        
                             src={post.img}
                             style={{width:600, height:500, objectFit: "cover"}}                       
@@ -174,21 +179,21 @@ export default function News(){
                     <div className='statsSection'>
                             <div className='likesSection' onClick={() => {dispatch(likeToggle(post.id, user!.id))}}>
                                 <div className='likesWrapper'>
-                                <img style={{width:20, height:20}} src={post.isLiked ? '/pictures/liked.png' : '/pictures/like.png'} />
-                                {post.likes}
+                                <img style={{width:20, height:20}} src={post.isLiked ? liked : like}/>
+                                {post.whoLiked?.length}
                                 </div>
                             </div>
                             <div className='commentsSection'>
                                 <div className="commentsWrapper" onClick={() => openComments(post.id)}>
                                     
-                                        <img  style={{height:20, width:20}} src='/pictures/comments.png' />
+                                        <img  style={{height:20, width:20}} src={comment}/>
                                         {post.comments.quantity}
                                     
                                 </div>
                             </div>
                             <div className='repostsSection'>
                                 <div className='repostsWrapper' onClick={() => {setRepost(post.id)}}>
-                                    <img style={{height:20, width:20}} src='pictures/repost.png'/>
+                                    <img style={{height:20, width:20}} src={repost}/>
                                     {post.reposts.quantity}
                                 </div>
                             </div>
